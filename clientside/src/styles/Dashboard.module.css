@@ -1,0 +1,107 @@
+/* Note que as classes hifenizadas (como .dashboard-container) foram
+   substituídas por camelCase (como .dashboardContainer) para coincidir
+   com a notação styles.dashboardContainer no seu JSX.
+*/
+
+.dashboardContainer {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.headerControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+} 
+
+.mainTitle {
+    font-size: 24px;
+    font-weight: 500;
+    /* Removido o margin-bottom para não conflitar com headerControls */
+}
+
+.converterLinkButton {
+    padding: 10px 20px;
+    background-color: #ffc107; /* Amarelo principal */
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.converterLinkButton:hover {
+    background-color: #e0a800;
+}
+
+.cardGrid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px 0 20px;
+}
+
+.quotationTable {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background: #fff;
+}
+
+.tableHeader {
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    border-bottom: 2px solid #ddd !important;
+}
+
+.quotationRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Para aplicar estilos a um seletor interno (col-moeda) dentro de tableHeader,
+   precisamos combiná-los. No CSS Modules, você acessa uma classe globalmente 
+   se não quiser que ela seja transformada, mas o mais seguro é usar a combinação 
+   de classes transformadas.
+*/
+.tableHeader .colMoeda {
+    text-align: left;
+    padding-left: 65px; 
+}
+
+/* Estilo para a coluna geral (col) - Usada em grid-template-columns */
+.colMoeda, .col {
+    /* (Se precisar de estilos de coluna específicos que não sejam de grid) */
+}
+
+/* Estilo para a barra de filtros/dropdown */
+.quotationHeader {
+    display: flex;
+    justify-content: flex-end; /* Alinha o dropdown à direita */
+    margin-bottom: 15px;
+}
+
+.currencyDropdown {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}

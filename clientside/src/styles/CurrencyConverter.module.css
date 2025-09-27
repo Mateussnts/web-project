@@ -1,0 +1,171 @@
+/* src/styles/CurrencyConverter.module.css */
+
+.converterCard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.header h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.rateInfo {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Formulário e Campos --- */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label {
+    align-self: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.inputGroup {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.inputField {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.inputField[type="number"] {
+    -moz-appearance: textfield; 
+}
+.inputField::-webkit-inner-spin-button, 
+.inputField::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+.currencySelector {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.flag {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.selectCurrency {
+    padding: 12px 5px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* --- Botão de Troca (Swap) --- */
+.swapButtonContainer {
+    text-align: center;
+    margin: -10px 0; /* Coloca o botão entre os inputs */
+}
+
+.swapButton {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+    transition: background-color 0.3s;
+}
+
+.swapButton:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Botões de Ação --- */
+
+.convertButton {
+    padding: 14px;
+    background-color: #ffc107; /* Amarelo principal */
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.convertButton:hover {
+    background-color: #e0a800;
+}
+
+.convertButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.secondaryButton {
+    padding: 14px;
+    background-color: #e0e0e0; /* Cinza claro */
+    color: #666;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.secondaryButton:hover {
+    background-color: #d0d0d0;
+}
+
+.errorMessage {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.fullPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    padding: 20px;
+    background-color: #f7f7f7; /* Fundo cinza claro */
+}
+
